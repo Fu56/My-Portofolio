@@ -25,8 +25,18 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.logo{
+.logo {
     width: 120px;
+    max-width: 150px; /* Prevent logo from becoming too large */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: Circular logo for a modern look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    padding: 5px; /* Add some padding for better spacing */
+    background: rgba(255, 255, 255, 0.1); /* Subtle background for transparency */
+}
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 0 15px rgba(94, 84, 63, 0.5); /* Glow effect with theme color */
 }
 nav ul li{
     display: inline-block;
@@ -43,7 +53,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 4px;
-    background: #00eeff;
+    background: #ff9900;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -61,4 +71,72 @@ nav ul li a:hover::after{
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff9900;
+}
+/* About Section */
+#about{
+    padding: 80px;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{ 
+    width: 100%;
+    border-radius: 10px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin:20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+    transition: 0.5s;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    margin-right: 10px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
 }
