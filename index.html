@@ -37,9 +37,9 @@
                     adipiscing elit. Sed do eiusmod tempor incididunt
                      ut labore et dolore magna aliqua.</p> 
                      <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab("skills")">Skills</p>
-                        <p class="tab-links"onclick="opentab("Education")">Education</p>
-                        <p class="tab-links"onclick="opentab("Experience")">Experience</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('Education')">Education</p>
+                        <p class="tab-links"onclick="opentab('Experience')">Experience</p>
                      </div>     
                      <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -53,7 +53,7 @@
                         <ul>
                             <li><span>2023</span><br>UI/UX Design Learning at Wollo University</li>
                             <li><span>2024</span><br>Web Development Learning at Kombolcha Institute of Technology</li>
-                            <li><span>2025</span><br>/li>
+                            <li><span>2025</span>Internship at MKF ICT Solution At Addis Ababa<br></li>
 
                         </ul>
                      </div>   
@@ -79,6 +79,8 @@
             for(tabcontent of tabcontents){
                 tabcontent.classList.remove("active-tab");
             }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
 </body>
