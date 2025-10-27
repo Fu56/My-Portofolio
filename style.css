@@ -354,15 +354,8 @@ form .btn2{
     color: #61b752;
 }
 /* responsiveness */
-nav.fas .fa-bars,
-nav.fas .fa-times{
-    display: none !important;
-}
-
-@media only screen and (max-width: 769px){
-    nav.fas{
-        display: none;
-    }
+nav .fas{
+    display: none;
 }
 @media only screen and (max-width: 600px){
     #header{
