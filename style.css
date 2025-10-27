@@ -348,6 +348,11 @@ form .btn2{
     margin-top: 20px;
 }
 
+#msg{
+    display: block;
+    margin-top: -40px;
+    color: #61b752;
+}
 /* responsiveness */
 nav.fas{
     display: none;
